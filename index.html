@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI SoftgridLab — AI와 자동화로 비즈니스 생산성 혁신</title>
+  <meta name="description" content="25년 IT 경험과 AI·자동화로 비즈니스 생산성을 혁신하는 AI Transformation Lab. LangChain, Vibe Coding, DX 컨설팅." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --border: #2d3a4d;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-soft: rgba(88, 166, 255, 0.15);
+      --green: #3fb950;
+      --green-soft: rgba(63, 185, 80, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem; }
+    header {
+      text-align: center;
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      color: var(--text-muted);
+      font-size: 1rem;
+      font-weight: 500;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    section {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type { border-bottom: none; }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h2::before { content: ''; width: 4px; height: 1.1em; background: var(--accent); border-radius: 2px; }
+    p { color: var(--text-muted); margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul { margin: 0.5rem 0 0 1.25rem; color: var(--text-muted); font-size: 0.95rem; }
+    ul li { margin-bottom: 0.35rem; }
+    .pill-list {
+      list-style: none;
+      margin: 0.75rem 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .pill-list li {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .strength-list li::marker { content: '✓ '; color: var(--green); }
+    .strength-list { list-style: none; margin-left: 0; }
+    .strength-list li { padding-left: 1.25rem; position: relative; }
+    .strength-list li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 600; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid var(--border);
+    }
+    th { color: var(--text-muted); font-weight: 600; background: var(--surface); }
+    td { color: var(--text); }
+    blockquote {
+      border-left: 4px solid var(--accent);
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      background: var(--accent-soft);
+      border-radius: 0 8px 8px 0;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .links a:hover { text-decoration: underline; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .stat strong { display: block; color: var(--accent); font-size: 1.1rem; margin-bottom: 0.25rem; }
+    .stat span { font-size: 0.85rem; color: var(--text-muted); }
+    @media (max-width: 640px) {
+      .container { padding: 1.5rem 1rem; }
+      header { padding: 2rem 0 1.5rem; }
+      h1 { font-size: 1.5rem; }
+      table { font-size: 0.8rem; }
+      th, td { padding: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏠 AI SoftgridLab</h1>
+      <p class="tagline">AI와 자동화로 비즈니스 생산성을 혁신하고, 25년 IT 경험을 미래 가치로 전환합니다</p>
+    </header>
+
+    <section>
+      <h2>우리 팀에 오신 걸 환영합니다</h2>
+      <p>전통적인 개발 방식과 최신 AI 기술을 융합하여, 프로덕트 기획부터 개발·운영·사업화까지 전 과정을 통합 실행하는 전문가 그룹입니다.</p>
+      <h3 style="font-size:1rem; font-weight:600; margin:1.25rem 0 0.5rem; color:var(--text);">우리가 하는 일</h3>
+      <ul>
+        <li><strong>AI 기반 업무 자동화</strong> — LangChain, LangGraph, MCP 맞춤형 AI 에이전트 구축</li>
+        <li><strong>Vibe Coding 기반 빠른 개발</strong> — Cursor AI, Claude로 MVP·프로덕션 개발</li>
+        <li><strong>프로덕트 전 생애주기 관리</strong> — 기획 → 개발 → 운영 → 사업화 통합 실행</li>
+        <li><strong>디지털 전환(DX) 컨설팅</strong> — 레거시 현대화 및 AI 통합 전략</li>
+      </ul>
+      <h3 style="font-size:1rem; font-weight:600; margin:1.25rem 0 0.5rem; color:var(--text);">우리의 강점</h3>
+      <ul class="strength-list">
+        <li>웹 1.0부터 AI 시대까지 25년 실전 경험</li>
+        <li>전략 수립과 기술 구현을 통합하는 비즈니스 아키텍처</li>
+        <li>개발자부터 임원까지 경험한 리더십</li>
+        <li>창업 경험 기반 수익 모델 설계 능력</li>
+        <li>AI 도구로 품질과 속도를 동시에 극대화</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>팀 소개</h2>
+      <p><strong>AI Transformation Lab</strong>은 25년 IT 경력을 바탕으로 AI 시대의 비즈니스 혁신을 선도하는 전문가 그룹입니다.</p>
+      <p><strong>Core Team</strong> — 대표: AI 전략 및 자동화 아키텍트, 25년 풀스택 비즈니스 디렉터. 전문 분야: AI 에이전트 구축, Vibe Coding, 프로덕트 라이프사이클 관리.</p>
+      <ul class="pill-list">
+        <li>AI & Automation (LangChain, LangGraph, MCP)</li>
+        <li>Full-Stack Development (25년)</li>
+        <li>Business Strategy & PMO</li>
+        <li>Digital Transformation</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>주요 프로젝트</h2>
+      <table>
+        <thead>
+          <tr><th>프로젝트</th><th>설명</th><th>기술 스택</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>AI Agent Automation Platform</td><td>LangGraph 멀티 에이전트, 워크플로우 자동화</td><td>Python, LangChain, FastAPI</td></tr>
+          <tr><td>Vibe Coding Accelerator</td><td>Cursor AI + Claude 고속 개발</td><td>Cursor AI, Claude</td></tr>
+          <tr><td>Business Process Automation</td><td>RPA + AI, 수주/고객응대/사후관리</td><td>Python, ChatGPT API</td></tr>
+          <tr><td>AI-Powered Product Platform</td><td>AI 기반 기획, 요구사항 분석·문서화</td><td>LLM, Python, React</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>기술 스택</h2>
+      <p>AI: LangChain, LangGraph, MCP, ChatGPT/Claude API, Cursor AI, GitHub Copilot · 개발: Python, Java, Spring, React, Next.js, PostgreSQL, MongoDB, Docker, CI/CD</p>
+    </section>
+
+    <section>
+      <h2>우리의 철학</h2>
+      <blockquote>
+        기술은 수단이고, 비즈니스 가치 창출이 목적입니다.<br />
+        AI는 도구이고, 인간의 창의성과 판단이 핵심입니다.<br />
+        경험은 자산이고, 지속적 학습이 경쟁력입니다.
+      </blockquote>
+      <p>실행력 · 통합적 사고 · 지속적 혁신 · 가치 중심 · 지식 공유</p>
+    </section>
+
+    <section>
+      <h2>협업 제안</h2>
+      <table>
+        <thead>
+          <tr><th>프로젝트 유형</th><th>설명</th><th>예상 기간</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>AI 에이전트 구축</td><td>맞춤형 AI 봇 개발</td><td>2–4주</td></tr>
+          <tr><td>MVP 개발</td><td>Vibe Coding 프로토타입</td><td>1–3주</td></tr>
+          <tr><td>워크플로우 자동화</td><td>AI/RPA 반복 업무 자동화</td><td>2–6주</td></tr>
+          <tr><td>프로덕트 컨설팅</td><td>기획~개발 로드맵</td><td>1–2주</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:1rem;">스타트업 창업자, 비즈니스 오너, 개발자, 기획자 — 함께하고 싶으시면 연락 주세요.</p>
+    </section>
+
+    <section>
+      <h2>포트폴리오 & 실적</h2>
+      <div class="stats">
+        <div class="stat"><strong>25년+</strong><span>IT 경력</span></div>
+        <div class="stat"><strong>100+</strong><span>프로젝트 완수</span></div>
+        <div class="stat"><strong>10+</strong><span>AI 자동화 구축</span></div>
+        <div class="stat"><strong>2017</strong><span>IoT Award 수상</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>연락처</h2>
+      <div class="links">
+        <a href="mailto:softgridlab@gmail.com">softgridlab@gmail.com</a>
+        <a href="https://github.com/team-softgrid" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://blog.naver.com/freewd" target="_blank" rel="noopener">AI 블로그</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
