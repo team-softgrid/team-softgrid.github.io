@@ -133,10 +133,8 @@ Notion · Jira · Slack · GitHub · GitLab · Figma · Miro
 
 ## 📖 리소스 & 연락처
 
-- **지식 베이스** — [AI 블로그](https://blog.naver.com/freewd)
 - **이메일** — [softgridlab@gmail.com](mailto:softgridlab@gmail.com)
-- **GitHub** — [github.com/team-softgrid](https://github.com/team-softgrid)
-- **블로그** — [blog.naver.com/freewd](https://blog.naver.com/freewd)
+
 
 ---
 
