@@ -134,6 +134,7 @@ Notion · Jira · Slack · GitHub · GitLab · Figma · Miro
 ## 📖 리소스 & 연락처
 
 - **이메일** — [softgridlab@gmail.com](mailto:softgridlab@gmail.com)
+-  <a href="https://open.kakao.com/o/gs2yJ7hi" target="_blank" rel="noopener">오픈 채팅방</a>
 
 
 ---
